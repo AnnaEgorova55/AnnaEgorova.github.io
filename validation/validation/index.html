@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Regular Expressions</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header class="header">
         <img class="header__logo" src="https://pictures.s3.yandex.net/frontend-developer/dom_bom/logo.svg" alt="logo">
@@ -20,24 +22,32 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name"
+                            pattern="^[А-Я+Ё][а-я+ё]+(-[А-Я+Ё][а-я+ё]+)?$" placeholder="Имя" required minlength="2"
+                            maxlength="20" />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="email" pattern="" placeholder="E-Mail" required />
+                        <input class="form__input" type="text" name="email"
+                            pattern="^[\w\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}$" placeholder="E-Mail" required />
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="" minlength="" maxlength="18"  required/>
+                        <input class="form__input" type="text" name="tel" placeholder="Телефон"
+                            pattern="(\+7|8)(\(|\s)?9\d{2}(\)|\s|\)\s|-)?\d{3}(\s|-)?\d{2}(\s|-)?\d{2}" minlength=""
+                            maxlength="18" required />
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="url" pattern="" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="text" name="url"
+                            pattern="http(s)?:\/\/(www\.)?(((([a-z]+(-[a-z]+)+)|([a-z]{2,}))(\.[a-z]{2,6})+)|(([1-9]|([1-9]\d)|(1\d\d)|(2[1-4]\d)|(25[0-5]))(\.([0-9]|([1-9]\d)|(1\d\d)|(2[0-4]\d)|(25[0-5]))){2}\.([1-9]|([1-9]\d)|(1\d\d)|(2[1-4]\d)|(25[0-5]))))((:(([1-9]\d)|([1-9]\d\d)|([1-9]\d\d\d)|([1-9]\d\d\d\d)))?)((/[a-z1-9]{2,})*(#)?)"
+                            placeholder="Ваш сайт" required />
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="text">Отправить</button>
                 </fieldset>
             </form>
         </div>
-    </main>     
+    </main>
 </body>
+
 </html>
