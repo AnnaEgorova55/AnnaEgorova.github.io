@@ -1,6 +1,4 @@
-# AnnaEgorova.github.io
-
-## https://github.com/AnnaEgorova55/AnnaEgorova.github.io/commit/76bcfdd307625b8dc66003bf628633acf5ffd5e1
+# https://annaegorova55.github.io/AnnaEgorova.github.io/
 
 Актуальная версия проекта v0.0.4  
 
